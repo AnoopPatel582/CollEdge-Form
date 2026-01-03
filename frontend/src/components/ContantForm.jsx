@@ -158,27 +158,47 @@ function ContactForm() {
             {contacts.length === 0 ? (
                 <p>No contacts found</p>
             ) : (
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Message</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div>
+                    <div className="desktop-only">
+                        <div className="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {contacts.map((contact) => (
+                                        <ContactRow
+                                            key={contact._id}
+                                            contact={contact}
+                                            onDelete={deleteContact}
+                                        />
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div className="mobile-only">
                         {contacts.map((contact) => (
-                            <ContactRow
-                                key={contact._id}
-                                contact={contact}
-                                onDelete={deleteContact}
-                            />
-                        ))}
-                    </tbody>
+                            <div className="contact-card" key={contact._id}>
+                                <p><strong>Name:</strong> {contact.name}</p>
+                                <p><strong>Phone:</strong> {contact.phone}</p>
+                                <p><strong>Email:</strong> {contact.email || "-"}</p>
+                                <p><strong>Message:</strong> {contact.message || "-"}</p>
 
-                </table>
+                                <button onClick={() => deleteContact(contact._id)}>
+                                    Delete
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             )}
 
         </div>
