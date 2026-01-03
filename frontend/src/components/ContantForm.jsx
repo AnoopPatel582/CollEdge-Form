@@ -41,7 +41,7 @@ function ContactForm() {
 
     const fetchContacts = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/contacts");
+            const response = await fetch("https://colledge-form.onrender.com/api/contacts");
             const data = await response.json();
             setContacts(data);
         } catch (error) {
@@ -51,7 +51,7 @@ function ContactForm() {
 
     const deleteContact = async (id) => {
         try {
-            await fetch(`http://localhost:5000/api/contacts/${id}`, {
+            await fetch(`https://colledge-form.onrender.com/api/contacts/${id}`, {
                 method: "DELETE",
             });
             fetchContacts(); // refresh list
@@ -67,7 +67,7 @@ function ContactForm() {
         if (!validate()) return;
 
         // console.log({ name, phone, email, message });
-        await fetch("http://localhost:5000/api/contacts", {
+        await fetch("https://colledge-form.onrender.com/api/contacts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
