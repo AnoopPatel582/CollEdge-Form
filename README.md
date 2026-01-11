@@ -1,0 +1,7 @@
+📇 Contact Management Web App (MERN)
+
+This project is a full-stack Contact Management Web Application developed using the MERN stack (MongoDB, Express.js, React, and Node.js). The application allows users to add, view, and delete contact information through a clean and intuitive user interface. Client-side form validation ensures correct input, while the backend exposes RESTful APIs to handle data persistence and retrieval. All contact data is securely stored in MongoDB Atlas, enabling reliable and scalable cloud-based storage.
+
+The frontend is built with React (Vite) and uses modern React concepts such as controlled components, hooks, and reusable components to manage state and UI updates efficiently without page reloads. Submitted contacts are displayed dynamically, with a table-based layout for desktop screens and a card-based layout for mobile devices, ensuring a responsive and user-friendly experience across different screen sizes. Special attention was given to mobile responsiveness and UX, following industry-standard design practices.
+
+On the backend, the application uses Node.js and Express.js to implement REST APIs for creating, fetching, and deleting contacts. The project demonstrates a clear separation of concerns between frontend, backend, and database layers, along with proper API structure and error handling. The entire application is deployed using modern deployment platforms, making it accessible as a live, production-ready project and showcasing practical full-stack development skills.
