@@ -1,5 +1,5 @@
-📇 Contact Management Web App (MERN)
-Deployed Link: https://coll-edge-form.vercel.app/
+📇 Contact Management Web App (MERN)<br>
+Deployed Link: https://coll-edge-form.vercel.app/<br>
 This project is a full-stack Contact Management Web Application developed using the MERN stack (MongoDB, Express.js, React, and Node.js). The application allows users to add, view, and delete contact information through a clean and intuitive user interface. Client-side form validation ensures correct input, while the backend exposes RESTful APIs to handle data persistence and retrieval. All contact data is securely stored in MongoDB Atlas, enabling reliable and scalable cloud-based storage.
 
 The frontend is built with React (Vite) and uses modern React concepts such as controlled components, hooks, and reusable components to manage state and UI updates efficiently without page reloads. Submitted contacts are displayed dynamically, with a table-based layout for desktop screens and a card-based layout for mobile devices, ensuring a responsive and user-friendly experience across different screen sizes. Special attention was given to mobile responsiveness and UX, following industry-standard design practices.
